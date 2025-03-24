@@ -1,48 +1,52 @@
 import React from 'react'
+import { useState } from 'react'
+import { IoCloseOutline } from 'react-icons/io5'
+import { RxHamburgerMenu } from "react-icons/rx"
+// import Image from './Image'
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   return (
-    <div className="drawer">
-  <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content flex flex-col">
-    {/* Navbar */}
-    <div className="navbar bg-base-300 w-full">
-      <div className="flex-none lg:hidden">
-        <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="inline-block h-6 w-6 stroke-current">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </label>
-      </div>
-      <div className="mx-2 flex-1 px-2">Navbar Title</div>
-      <div className="hidden flex-none lg:block">
-        <ul className="menu menu-horizontal">
-          {/* Navbar menu content here */}
-          <li><a>Navbar Item 1</a></li>
-          <li><a>Navbar Item 2</a></li>
-        </ul>
-      </div>
+    <div className='w-full font-bold h-16 md:h-20 flex items-center justify-between'> 
+    {/* logo */}
+    {/* <Image 
+    src='logo.png'
+    alt='logo'
+    w={40}
+    h={40}
+    /> */}
+    <span className='text-2xl my-logo text-rose-800' >Savannah</span>
+    {/* moblieMenu */}
+    <div className='md:hidden'>
+        {/* moblie button */}
+        <div className='text-4xl font-bold text-rose-800' onClick={() => setOpen(prev => !prev)}>
+           {open ? <IoCloseOutline />: <RxHamburgerMenu />}
+        </div>
+        {/* mobile list */}
+        <div className={`w-full h-screen flex flex-col items-center justify-center absolute top-16 
+            transition-all ease-in-out gap-8 font-medium text-lg ${ open ? "-right-0" : "-right[100%]"}`} >
+          <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Most Popular</a>
+        <a href="#">About</a>
+        <a href="#">
+            <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white'>Log in </button>
+        </a>
+        </div>
     </div>
-    {/* Page content here */}
-    Content
-  </div>
-  <div className="drawer-side">
-    <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-base-200 min-h-full w-80 p-4">
-      {/* Sidebar content here */}
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  </div>
+    {/* desktopMenu */}
+    <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium' >
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Most Popular</a>
+        <a href="#">About</a>
+        <a href="#">
+            <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white'>Log in </button>
+        </a>
+    </div>
+
 </div>
+
   )
 }
 
