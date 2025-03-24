@@ -16,12 +16,18 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: Build project
         run: npm run build
+
+      # Add this step to create a 404.html copy of index.html
+      - name: Prepare for client-side routing
+        run: cp dist/index.html dist/404.html
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
@@ -47,3 +53,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          # Enable this for custom domain or to force nojekyll
+          enable_jekyll: false
