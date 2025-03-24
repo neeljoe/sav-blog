@@ -1,7 +1,9 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
 import React from 'react'
 import { useState } from 'react'
 import { IoCloseOutline } from 'react-icons/io5'
 import { RxHamburgerMenu } from "react-icons/rx"
+import { Link } from 'react-router-dom'
 // import Image from './Image'
 
 const Navbar = () => {
@@ -15,34 +17,41 @@ const Navbar = () => {
     w={40}
     h={40}
     /> */}
-    <span className='text-2xl my-logo text-rose-800' >Savannah</span>
+    <Link to="/" className='text-2xl my-logo text-rose-800' >Savannah</Link>
     {/* moblieMenu */}
     <div className='md:hidden'>
         {/* moblie button */}
-        <div className='text-4xl font-bold text-rose-800' onClick={() => setOpen(prev => !prev)}>
+        <div className='text-4xl font-bold text-rose-600' onClick={() => setOpen(prev => !prev)}>
            {open ? <IoCloseOutline />: <RxHamburgerMenu />}
         </div>
         {/* mobile list */}
         <div className={`w-full h-screen flex flex-col items-center justify-center absolute top-16 
             transition-all ease-in-out gap-8 font-medium text-lg ${ open ? "-right-0" : "-right[100%]"}`} >
-          <a href="#">Home</a>
-        <a href="#">Trending</a>
-        <a href="#">Most Popular</a>
-        <a href="#">About</a>
-        <a href="#">
+          <Link to="/">Home</Link>
+        <Link to="/">Trending</Link>
+        <Link to="/">Most Popular</Link>
+        <Link to="/">About</Link>
+        <Link to="/">
             <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white'>Log in </button>
-        </a>
+        </Link>
         </div>
     </div>
     {/* desktopMenu */}
     <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium' >
-        <a href="#">Home</a>
-        <a href="#">Trending</a>
-        <a href="#">Most Popular</a>
-        <a href="#">About</a>
-        <a href="#">
-            <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white'>Log in </button>
-        </a>
+        <Link to="">Home</Link>
+        <Link to="">Trending</Link>
+        <Link to="">Most Popular</Link>
+        <Link to="">About</Link>
+       
+         <SignedOut>
+           <Link to="/login">
+            <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white '>Log in </button>
+            </Link>
+          </SignedOut >
+
+        <SignedIn>
+         <UserButton />
+        </SignedIn>
     </div>
 
 </div>
