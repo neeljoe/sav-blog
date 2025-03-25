@@ -27,21 +27,21 @@ const Navbar = () => {
         {/* mobile list */}
         <div className={`w-full h-screen flex flex-col items-center justify-center absolute top-16 
             transition-all ease-in-out gap-8 font-medium text-lg ${ open ? "-right-0" : "-right[100%]"}`} >
-          <Link to="/">Home</Link>
-        <Link to="/">Trending</Link>
-        <Link to="/">Most Popular</Link>
-        <Link to="/">About</Link>
-        <Link to="/">
+          <Link to="/" className='hover:text-rose-600 transition-all ease-in-out'>Home</Link>
+        <Link to="/"  className='hover:text-rose-600 transition-all ease-in-out'>Trending</Link>
+        <Link to="/"  className='hover:text-rose-600 transition-all ease-in-out'>Most Popular</Link>
+        <Link to="/"  className='hover:text-rose-600 transition-all ease-in-out'>About</Link>
+        <Link to="/"  className='hover:text-rose-600 transition-all ease-in-out'>
             <button className='py-2 px-4 rounded-3xl bg-rose-600 text-white'>Log in </button>
         </Link>
         </div>
     </div>
     {/* desktopMenu */}
     <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium' >
-        <Link to="">Home</Link>
-        <Link to="">Trending</Link>
-        <Link to="">Most Popular</Link>
-        <Link to="">About</Link>
+        <Link to="/" className='hover:text-rose-600 transition-all ease-in-out'>Home</Link>
+        <Link to="" className='hover:text-rose-600 transition-all ease-in-out'>Trending</Link>
+        <Link to="" className='hover:text-rose-600 transition-all ease-in-out'>Most Popular</Link>
+        <Link to="" className='hover:text-rose-600 transition-all ease-in-out'>About</Link>
        
          <SignedOut>
            <Link to="/login">
