@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './HomePage.css'
 import MainCategories from '../components/MainCategories'
 import FeaturedPosts from '../components/FeaturedPosts'
+import PostList from '../components/PostList'
 
 const HomePage = () => {
   return (
@@ -55,7 +56,15 @@ const HomePage = () => {
    <MainCategories />
     {/* Featured Posts */}
     <FeaturedPosts />
-    {/* Post list */}</>
+    {/* Post list */}
+    <div>
+      <h1 className='mt-20 text-2xl mb-8'>Recent Posts</h1>
+      <PostList />
+    </div>
+    
+    
+    </>
+    
  
      
    
