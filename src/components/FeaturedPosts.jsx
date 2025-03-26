@@ -9,7 +9,7 @@ const FeaturedPosts = () => {
       <div className='w-full lg:w-1/2 flex flex-col gap-4'>
       {/* image  */}
          <Image 
-         src="featured1.jpeg" className="rounded-3xl"/>
+         src="featured1.jpeg" className="rounded-3xl" w="895"/>
          {/* details */}
          <div className="flex items-center gap-4">
             <h1 className='font-semibold lg:text-lg'>01.</h1>
@@ -18,6 +18,7 @@ const FeaturedPosts = () => {
          </div>
         {/* title */}
         <Link to="/test" className='text-xl lg:text-3xl font-semi-bold lg:font-bold'>Elevate Your Space: Ten Essential Home Decor Tips</Link>
+        <div className="divider flex lg:hidden"></div>
       </div>
       {/* others */}
       <div className='w-full lg:w-1/2 flex flex-col gap-4 '>

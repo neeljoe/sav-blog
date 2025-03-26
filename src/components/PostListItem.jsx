@@ -1,28 +1,27 @@
 import React from 'react'
 import Image from './Image'
 import { Link } from 'react-router-dom'
-const PostListItem = () => {
+const PostListItem = ({id, title, date, author, text, img, category}) => {
   return (
     <div className='flex flex-col xl:flex-row gap-8'>
         {/* image */}
-        <div className='md:hidden xl:block'>
-        <Image src="sunshinenew.webp" className="rounded-2xl object-cover " />
+        <div className='md:hidden xl:block lg:w-1/3'>
+        <Image src={img} className="rounded-2xl object-cover" w="740" />
         </div>
         {/* details */}
-        <div className='flex flex-col gap-4'>
-            <Link to="/test" className='text-4xl font-semibold'>Little Miss SunShine </Link>
+        <div className='flex flex-col gap-4 lg:w-2/3 lg:py-8'>
+            <Link to="/test" className='text-4xl font-semibold'>{title} </Link>
             <div className='flex items-center gap-2 '>
                 <span>Written by</span>
-                <Link className='text-gray-900'>Savannah</Link>
+                <Link className='text-blue-500'>{author}</Link>
                 <span>on</span>
-                <Link className='text-gray-900'>Movies to Watch</Link>
-                <span>2 days ago</span>
+                <Link className='text-blue-500'>{category}</Link>
+                <span>{date}</span>
             </div>
-            <p>Little Miss Sunshine follows the dysfunctional Hoover family's cross-country road trip to
-                 Redondo Beach, California, where their seven-year-old daughter, Olive, hopes to win the
-                  Little Miss Sunshine pageant </p>
+            <p>{text}</p>
                   <Link to="/test" className='text-gray-900'>Read more</Link>
         </div>
+       
     </div>
   )
 }
