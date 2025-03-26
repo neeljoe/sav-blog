@@ -57,7 +57,8 @@ const HomePage = () => {
     {/* Featured Posts */}
     <FeaturedPosts />
     {/* Post list */}
-    <div>
+    <div className="divider mt-8"></div>
+    <div className=''>
       <h1 className='mt-20 text-2xl mb-8'>Recent Posts</h1>
       <PostList />
     </div>
