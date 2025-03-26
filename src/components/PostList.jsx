@@ -5,7 +5,7 @@ import postData from '../data/post'
 
 const PostList = () => {
   return (
-    <div className='flex flex-col gap-8 mb-5'>
+    <div className='flex flex-col gap-8 '>
        
       {postData.map((post) => (
         <>
@@ -18,7 +18,7 @@ const PostList = () => {
           text={post.text}
           img={post.img}
         />
-        <div className="divider p-0 m-0"></div>
+       <div className="divider"></div>
         </>
       ))}
     
