@@ -8,9 +8,8 @@ const PostList = () => {
     <div className='flex flex-col gap-8 '>
        
       {postData.map((post) => (
-        <>
+        <React.Fragment key={post.id}>
           <PostListItem
-          key={post.id}
           title={post.title}
           date={post.date}
           author={post.author}
@@ -19,7 +18,7 @@ const PostList = () => {
           img={post.img}
         />
        <div className="divider"></div>
-        </>
+        </React.Fragment>
       ))}
     
       
