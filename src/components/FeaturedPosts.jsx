@@ -32,9 +32,11 @@ const FeaturedPosts = () => {
         {/* details and title */}
         <div className="w-2/3  p-1 lg:p-3">
         {/* details */}
-        <div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
-          <h1 className='font-semibold'>02.</h1>
-          <Link  className='font-semibold'>Middle-East Biennale</Link>
+        <div className='flex flex-col sm:flex-row gap-1 text-sm lg:text-base mb-4'>
+        <div className='flex flex-row gap-2'>
+        <h1 className='font-semibold'>02.</h1>
+        <Link  className='font-semibold'>Middle-East Biennale</Link>
+        </div>
           <span className='text-sm font-light'>3 days ago</span>
         </div>
         {/* title */}
@@ -52,9 +54,11 @@ const FeaturedPosts = () => {
           {/* details and title */}
           <div className="w-2/3 p-1 lg:p-3">
            {/* details */}
-            <div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
+            <div className='flex flex-col sm:flex-row gap-1 text-sm lg:text-base mb-4'>
+            <div className='flex flex-row gap-2'>
             <h1 className='font-semibold'>03.</h1>
-          <Link className='font-semibold'>City of fashion </Link>
+            <Link className='font-semibold'>City of fashion </Link>
+            </div>
           <span className='text-sm font-light'> 3 days ago</span>
             </div>
             {/* title */}
@@ -72,9 +76,11 @@ const FeaturedPosts = () => {
           {/* details and title */}
           <div className="w-2/3 p-1 lg:p-3">
            {/* details */}
-        <div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
-        <h1 className='font-semibold'>04.</h1>
-          <Link className='font-semibold'>Day with lady of art</Link>
+        <div className='flex flex-col sm:flex-row gap-1 text-sm lg:text-base mb-4'>
+           <div className='flex flex-row gap-2'>
+           <h1 className='font-semibold'>04.</h1>
+           <Link className='font-semibold'>Day with lady of art</Link>
+           </div>
           <span className='text-sm font-light'>4 days ago</span>
 
             </div>
