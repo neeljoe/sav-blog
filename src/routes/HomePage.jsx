@@ -12,7 +12,7 @@ const HomePage = () => {
 <div className="breadcrumbs text-sm">
   <ul>
     <li ><Link to="/" className='hover:text-rose-600 transition-all ease-in-out'>Home</Link></li>
-    <li className='text-gray-500'>Blogs and Articles</li>
+    <li className='text-blue-500'>Blogs and Articles</li>
   </ul>
 </div>
     {/* Introduction */}
