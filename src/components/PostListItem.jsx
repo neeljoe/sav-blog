@@ -14,7 +14,7 @@ const PostListItem = ({id, title, date, author, text, img, category}) => {
             <div className='flex items-center gap-2 '>
                 <span>Written by</span>
                 <Link className='text-blue-500'>{author}</Link>
-                <span>on</span>
+                <span>n</span>
                 <Link className='text-blue-500'>{category}</Link>
                 <span>{date}</span>
             </div>
