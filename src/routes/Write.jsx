@@ -1,5 +1,8 @@
 import React from 'react'
 import { useUser } from '@clerk/clerk-react'
+import 'react-quill-new/dist/quill.snow.css';
+import ReactQuill from 'react-quill-new';
+
 
 const Write = () => {
   const {isLoaded, isSignedIn} = useUser()
@@ -11,10 +14,10 @@ const Write = () => {
   }
 
     return (
-    <div>
-      <h1>Create a New Post</h1>
-      <form>
-        <button>Add a Cover Image</button>
+    <div className='h-[calc(100vh-80px)] md:h-[calc(100vh-80px)] flex flex-col gap-6 mt-15'>
+      <h1 className='text-xl font-light'>Create a New Post</h1>
+      <form className='flex flex-col gap-6'>
+        <button className='btn w-auto'>Add a Cover Image</button>
         <input type="text" placeholder="My Awesome Story" />
         <div>
           <label htmlFor="">Choose a category</label>
@@ -28,6 +31,8 @@ const Write = () => {
           </select>
         </div>
         <textarea name="desc" placeholder='A Short Description' />
+        <ReactQuill theme="snow" />
+        <button>Send</button>
       </form>
     </div>
   )
